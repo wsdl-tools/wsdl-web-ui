@@ -85,6 +85,10 @@ npm run build
 
 The production build is output to `dist/`. Serve it with any static file server.
 
+## Supported by Mocks Cloud
+
+This project is supported by [Mocks Cloud](https://www.mocks.cloud) — instant cloud-hosted mocks from your OpenAPI specs and WSDL files. Upload a spec, get a live mock endpoint in seconds. Powered by the [Imposter](https://www.imposter.sh) open source mock engine.
+
 ## License
 
 Apache 2.0
