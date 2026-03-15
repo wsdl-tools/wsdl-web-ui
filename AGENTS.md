@@ -55,6 +55,8 @@ docs: update README with proxy instructions
 
 Do **not** add `Co-Authored-By` trailers to commit messages.
 
+Keep commit messages short — a subject line plus at most one brief summary line. Do not itemise every file or change.
+
 ## Testing
 
 - Run `npm test` before committing. All tests must pass.
