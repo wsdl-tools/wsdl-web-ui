@@ -1,0 +1,42 @@
+# Deep Linking
+
+Share URLs that pre-load a WSDL and navigate directly to a specific operation.
+
+## URL format
+
+```
+https://wsdl-tools.github.io/wsdl-web-ui/?url=<wsdl-url>#<Service>/<Endpoint>/<Operation>
+```
+
+## Query parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| `url`     | WSDL URL to load automatically on page open |
+
+## Hash fragments
+
+The hash fragment controls which endpoint group and operation are expanded:
+
+| Fragment | Effect |
+|----------|--------|
+| `#Service/Endpoint/Operation` | Expands the endpoint group and the specific operation |
+| `#Service/Endpoint` | Expands just the endpoint group |
+
+## Examples
+
+Load a WSDL and jump to a specific operation:
+
+```
+https://wsdl-tools.github.io/wsdl-web-ui/?url=https://example.com/service?wsdl#StockQuoteService/StockQuotePort/GetLastTradePrice
+```
+
+Load a WSDL without navigating to a specific operation:
+
+```
+https://wsdl-tools.github.io/wsdl-web-ui/?url=https://example.com/service?wsdl
+```
+
+## Live URL updates
+
+The URL in the address bar updates as you navigate — expanding endpoint groups and operations. You can copy the current URL at any time to share your exact view.
