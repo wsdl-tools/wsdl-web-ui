@@ -13,9 +13,10 @@ export function OperationCard({ operation }: OperationCardProps) {
   const isExpanded = expandedOperations.has(opKey)
 
   return (
-    <div>
+    <div data-testid={`operation-${operation.operationName}`}>
       <button
         onClick={() => toggleOperation(opKey)}
+        data-testid={`operation-toggle-${operation.operationName}`}
         className={`flex w-full items-center gap-3 px-5 py-3.5 text-left transition-colors hover:bg-[var(--soap-row-bg)] ${isExpanded ? 'bg-[var(--soap-row-bg)]' : ''}`}
       >
         <span className="shrink-0 rounded-md bg-[var(--soap-badge)] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[var(--soap-badge-fg)]">
