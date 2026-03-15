@@ -1,5 +1,7 @@
 # WSDL Web UI
 
+[![CI](https://github.com/wsdl-tools/wsdl-web-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/wsdl-tools/wsdl-web-ui/actions/workflows/ci.yml)
+
 A browser-based interactive explorer for WSDL web services. Enter a WSDL URL to inspect its services, endpoints, bindings and operations, then invoke them directly from the browser with auto-generated SOAP requests.
 
 > Think [Swagger UI](https://github.com/swagger-api/swagger-ui), but for SOAP/WSDL.
