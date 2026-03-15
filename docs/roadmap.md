@@ -1,6 +1,6 @@
-# Feature Roadmap — WSDL Web UI
+# Feature Roadmap — WSDL Web
 
-WSDL Web UI currently covers the core loop: parse WSDL, display services/operations, generate sample SOAP envelopes, execute requests, and show responses. This roadmap identifies features to add, while staying relevant to the SOAP/WSDL domain.
+WSDL Web currently covers the core loop: parse WSDL, display services/operations, generate sample SOAP envelopes, execute requests, and show responses. This roadmap identifies features to add, while staying relevant to the SOAP/WSDL domain.
 
 ---
 

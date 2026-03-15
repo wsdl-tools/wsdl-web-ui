@@ -1,6 +1,6 @@
 # Documentation
 
-User documentation for WSDL Web UI.
+User documentation for WSDL Web.
 
 ## Guides
 

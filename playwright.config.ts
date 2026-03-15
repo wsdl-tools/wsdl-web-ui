@@ -8,7 +8,7 @@ export default defineConfig({
   retries: 0,
   reporter: 'list',
   use: {
-    baseURL: 'http://localhost:5173/wsdl-web-ui/',
+    baseURL: 'http://localhost:5173/wsdl-web/',
     headless: true,
     screenshot: 'only-on-failure',
   },
@@ -17,7 +17,7 @@ export default defineConfig({
   ],
   webServer: {
     command: 'npm run dev',
-    url: 'http://localhost:5173/wsdl-web-ui/',
+    url: 'http://localhost:5173/wsdl-web/',
     reuseExistingServer: !process.env.CI,
     timeout: 15_000,
   },

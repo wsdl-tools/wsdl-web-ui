@@ -5,7 +5,7 @@ Share URLs that pre-load a WSDL and navigate directly to a specific operation.
 ## URL format
 
 ```
-https://wsdl-tools.github.io/wsdl-web-ui/?url=<wsdl-url>#<Service>/<Endpoint>/<Operation>
+https://wsdl-web.github.io/wsdl-web/?url=<wsdl-url>#<Service>/<Endpoint>/<Operation>
 ```
 
 ## Query parameters
@@ -28,13 +28,13 @@ The hash fragment controls which endpoint group and operation are expanded:
 Load a WSDL and jump to a specific operation:
 
 ```
-https://wsdl-tools.github.io/wsdl-web-ui/?url=https://example.com/service?wsdl#StockQuoteService/StockQuotePort/GetLastTradePrice
+https://wsdl-web.github.io/wsdl-web/?url=https://example.com/service?wsdl#StockQuoteService/StockQuotePort/GetLastTradePrice
 ```
 
 Load a WSDL without navigating to a specific operation:
 
 ```
-https://wsdl-tools.github.io/wsdl-web-ui/?url=https://example.com/service?wsdl
+https://wsdl-web.github.io/wsdl-web/?url=https://example.com/service?wsdl
 ```
 
 ## Live URL updates

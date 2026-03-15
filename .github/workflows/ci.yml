@@ -51,7 +51,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build -- --base=/wsdl-web-ui/
+      - run: npm run build -- --base=/wsdl-web/
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
@@ -82,7 +82,7 @@ jobs:
       - uses: docker/metadata-action@v5
         id: meta
         with:
-          images: outofcoffee/wsdl-web-ui
+          images: outofcoffee/wsdl-web
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}

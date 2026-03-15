@@ -2,7 +2,7 @@
 
 ## Project
 
-WSDL Web UI — a browser-based SOAP/WSDL explorer (like Swagger UI for WSDL). Single-page app built with TypeScript, React, Vite, shadcn/ui, Zustand.
+WSDL Web — a browser-based SOAP/WSDL explorer (like Swagger UI for WSDL). Single-page app built with TypeScript, React, Vite, shadcn/ui, Zustand.
 
 ## Tech stack
 

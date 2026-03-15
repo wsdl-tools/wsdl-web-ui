@@ -47,7 +47,7 @@ export function TopBar() {
             </svg>
           </div>
           <span className="hidden sm:block text-sm font-bold text-[var(--foreground)]">
-            WSDL Web UI
+            WSDL Web
           </span>
         </div>
 

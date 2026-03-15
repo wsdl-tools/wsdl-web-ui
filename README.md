@@ -1,12 +1,12 @@
-# WSDL Web UI
+# WSDL Web
 
-[![CI](https://github.com/wsdl-tools/wsdl-web-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/wsdl-tools/wsdl-web-ui/actions/workflows/ci.yml)
+[![CI](https://github.com/wsdl-web/wsdl-web/actions/workflows/ci.yml/badge.svg)](https://github.com/wsdl-web/wsdl-web/actions/workflows/ci.yml)
 
 A browser-based interactive explorer for WSDL web services. Enter a WSDL URL to inspect its services, endpoints, bindings and operations, then invoke them directly from the browser with auto-generated SOAP requests.
 
 > Think [Swagger UI](https://github.com/swagger-api/swagger-ui), but for SOAP/WSDL.
 
-### [Try it live &rarr;](https://wsdl-tools.github.io/wsdl-web-ui)
+### [Try it live &rarr;](https://wsdl-web.github.io/wsdl-web)
 No install required.
 
 ## Features
@@ -54,7 +54,7 @@ Edit the request XML and execute it directly from the browser.
 Share a URL that pre-loads a WSDL and navigates to a specific operation:
 
 ```
-https://wsdl-tools.github.io/wsdl-web-ui/?url=https://example.com/service?wsdl#ServiceName/PortName/OperationName
+https://wsdl-web.github.io/wsdl-web/?url=https://example.com/service?wsdl#ServiceName/PortName/OperationName
 ```
 
 - `?url=<wsdl-url>` loads the WSDL automatically
@@ -76,7 +76,7 @@ The same applies when fetching the WSDL itself — if the WSDL URL doesn't allow
 ## Docker
 
 ```sh
-docker run -p 8080:80 outofcoffee/wsdl-web-ui
+docker run -p 8080:80 outofcoffee/wsdl-web
 ```
 
 Then open http://localhost:8080 in your browser.

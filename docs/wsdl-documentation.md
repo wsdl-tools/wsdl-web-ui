@@ -1,6 +1,6 @@
 # WSDL Documentation Display
 
-WSDL Web UI extracts and displays `<wsdl:documentation>` elements from WSDL files, showing human-readable descriptions inline alongside services and operations.
+WSDL Web extracts and displays `<wsdl:documentation>` elements from WSDL files, showing human-readable descriptions inline alongside services and operations.
 
 ## What's displayed
 

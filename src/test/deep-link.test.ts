@@ -13,14 +13,14 @@ function makeLocation(url: string): Location {
 
 describe('parseDeepLink', () => {
   it('returns nulls when no params', () => {
-    const result = parseDeepLink(makeLocation('/wsdl-web-ui/'))
+    const result = parseDeepLink(makeLocation('/wsdl-web/'))
     expect(result.url).toBeNull()
     expect(result.target).toBeNull()
   })
 
   it('extracts url param', () => {
     const result = parseDeepLink(
-      makeLocation('/wsdl-web-ui/?url=https%3A%2F%2Fexample.com%2Fservice%3Fwsdl'),
+      makeLocation('/wsdl-web/?url=https%3A%2F%2Fexample.com%2Fservice%3Fwsdl'),
     )
     expect(result.url).toBe('https://example.com/service?wsdl')
     expect(result.target).toBeNull()
@@ -28,7 +28,7 @@ describe('parseDeepLink', () => {
 
   it('extracts url and full hash target', () => {
     const result = parseDeepLink(
-      makeLocation('/wsdl-web-ui/?url=https%3A%2F%2Fexample.com%2Fservice%3Fwsdl#MyService/MyPort/GetData'),
+      makeLocation('/wsdl-web/?url=https%3A%2F%2Fexample.com%2Fservice%3Fwsdl#MyService/MyPort/GetData'),
     )
     expect(result.url).toBe('https://example.com/service?wsdl')
     expect(result.target).toEqual({
@@ -40,7 +40,7 @@ describe('parseDeepLink', () => {
 
   it('extracts partial hash (group only)', () => {
     const result = parseDeepLink(
-      makeLocation('/wsdl-web-ui/?url=https%3A%2F%2Fexample.com%2Fservice#MyService/MyPort'),
+      makeLocation('/wsdl-web/?url=https%3A%2F%2Fexample.com%2Fservice#MyService/MyPort'),
     )
     expect(result.target).toEqual({
       service: 'MyService',
@@ -51,14 +51,14 @@ describe('parseDeepLink', () => {
 
   it('ignores hash with only one segment', () => {
     const result = parseDeepLink(
-      makeLocation('/wsdl-web-ui/?url=https%3A%2F%2Fexample.com%2Fservice#MyService'),
+      makeLocation('/wsdl-web/?url=https%3A%2F%2Fexample.com%2Fservice#MyService'),
     )
     expect(result.target).toBeNull()
   })
 
   it('decodes URI-encoded segments', () => {
     const result = parseDeepLink(
-      makeLocation('/wsdl-web-ui/?url=x#My%20Service/My%2FPort/Get%20Data'),
+      makeLocation('/wsdl-web/?url=x#My%20Service/My%2FPort/Get%20Data'),
     )
     expect(result.target).toEqual({
       service: 'My Service',
@@ -69,7 +69,7 @@ describe('parseDeepLink', () => {
 })
 
 describe('buildDeepLinkUrl', () => {
-  const basePath = '/wsdl-web-ui/'
+  const basePath = '/wsdl-web/'
 
   it('returns basePath when wsdlUrl is empty', () => {
     expect(buildDeepLinkUrl(basePath, '', new Set(), new Set())).toBe(basePath)
@@ -81,19 +81,19 @@ describe('buildDeepLinkUrl', () => {
 
   it('builds url-only link when nothing expanded', () => {
     const result = buildDeepLinkUrl(basePath, 'https://example.com/service?wsdl', new Set(), new Set())
-    expect(result).toBe('/wsdl-web-ui/?url=https%3A%2F%2Fexample.com%2Fservice%3Fwsdl')
+    expect(result).toBe('/wsdl-web/?url=https%3A%2F%2Fexample.com%2Fservice%3Fwsdl')
   })
 
   it('includes hash for expanded operation', () => {
     const ops = new Set(['MyService/MyPort/GetData'])
     const result = buildDeepLinkUrl(basePath, 'https://example.com/svc', ops, new Set())
-    expect(result).toBe('/wsdl-web-ui/?url=https%3A%2F%2Fexample.com%2Fsvc#MyService/MyPort/GetData')
+    expect(result).toBe('/wsdl-web/?url=https%3A%2F%2Fexample.com%2Fsvc#MyService/MyPort/GetData')
   })
 
   it('includes hash for expanded group when no operations expanded', () => {
     const groups = new Set(['MyService/MyPort'])
     const result = buildDeepLinkUrl(basePath, 'https://example.com/svc', new Set(), groups)
-    expect(result).toBe('/wsdl-web-ui/?url=https%3A%2F%2Fexample.com%2Fsvc#MyService/MyPort')
+    expect(result).toBe('/wsdl-web/?url=https%3A%2F%2Fexample.com%2Fsvc#MyService/MyPort')
   })
 
   it('prefers operation over group', () => {
