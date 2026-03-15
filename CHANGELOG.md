@@ -1,0 +1,39 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+
+## [0.1.0] - 2026-03-15
+### Added
+- feat: add Dockerfile and Docker Hub CI/CD (#3)
+- feat: add copy request as cURL button
+- feat: add deep linking with URL hash routing (#4)
+- feat: extract and display WSDL documentation elements (#5)
+- feat: redesign UI, add file browse, base URL override, AGENTS.md
+
+### Changed
+- chore: add Apache 2.0 license
+- chore: release v0.1.0
+- ci: add GitHub Actions workflow and deploy to GitHub Pages (#1)
+- docs: add CI badge to README
+- docs: add Mocks Cloud support mention to README
+- docs: add PR title convention to AGENTS.md
+- docs: add feature roadmap
+- docs: add pages for deep linking and WSDL documentation display
+- docs: add screenshots and improve README layout
+- docs: add user documentation with index
+- docs: move screenshots to docs/img
+- refactor: rename project to WSDL Web (wsdl-web)
+- test: add Playwright E2E tests (#2)
+
+### Fixed
+- fix: move useState before early return in OperationDetail
+- fix: rename cURL button to 'Copy as cURL'
+
+### Other
+- initial commit
+
+
