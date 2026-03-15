@@ -57,6 +57,14 @@ SOAP services typically don't set CORS headers, so requests from the browser may
 
 The same applies when fetching the WSDL itself — if the WSDL URL doesn't allow cross-origin requests, you'll need to proxy it.
 
+## Docker
+
+```sh
+docker run -p 8080:80 outofcoffee/wsdl-web-ui
+```
+
+Then open http://localhost:8080 in your browser.
+
 ## Building from source
 
 Requires Node.js 18+.
