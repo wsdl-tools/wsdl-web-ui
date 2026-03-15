@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.1.2] - 2026-03-15
+### Changed
+- build: add since.yaml for release automation (#22)
+- build: adds changelog
+- ci: update GitHub Actions to latest stable versions (#23)
+- docs: move Docker instructions near top of README
+
 ## [0.1.0] - 2026-03-15
 ### Added
 - feat: add Dockerfile and Docker Hub CI/CD (#3)
@@ -35,5 +42,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Other
 - initial commit
-
-
