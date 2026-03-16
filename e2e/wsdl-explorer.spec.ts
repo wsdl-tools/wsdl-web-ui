@@ -152,6 +152,29 @@ test.describe('WSDL Explorer', () => {
   })
 })
 
+test.describe('Footer', () => {
+  test('displays product name and GitHub link', async ({ page }) => {
+    await page.goto('/')
+    const footer = page.locator('footer')
+    await expect(footer).toBeVisible()
+    await expect(footer.getByText('WSDL Web')).toBeVisible()
+
+    const ghLink = footer.getByRole('link', { name: /GitHub/ })
+    await expect(ghLink).toHaveAttribute('href', 'https://github.com/wsdl-web/wsdl-web')
+    await expect(ghLink).toHaveAttribute('target', '_blank')
+  })
+
+  test('sticks to bottom on short viewport', async ({ page }) => {
+    await page.goto('/')
+    const footer = page.locator('footer')
+    const viewportHeight = page.viewportSize()!.height
+    const footerBox = await footer.boundingBox()
+    expect(footerBox).toBeTruthy()
+    // Footer bottom edge should be at or near the viewport bottom
+    expect(footerBox!.y + footerBox!.height).toBeGreaterThanOrEqual(viewportHeight - 1)
+  })
+})
+
 test.describe('Deep linking', () => {
   test('loads WSDL and expands operation from URL params', async ({ page }) => {
     await mockWsdlFetch(page)

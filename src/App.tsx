@@ -1,6 +1,7 @@
 import { useWsdlStore } from '@/store/wsdl-store'
 import { useDeepLink } from '@/hooks/use-deep-link'
 import { TopBar } from '@/components/layout/TopBar'
+import { Footer } from '@/components/layout/Footer'
 import { ServiceHeader } from '@/components/layout/ServiceHeader'
 import { ServiceList } from '@/components/explorer/ServiceList'
 import { ErrorAlert } from '@/components/shared/ErrorAlert'
@@ -11,7 +12,7 @@ export default function App() {
   const { document, operations, isLoading, error } = useWsdlStore()
 
   return (
-    <div className="min-h-screen bg-[var(--background)]">
+    <div className="flex min-h-screen flex-col bg-[var(--background)]">
       <TopBar />
 
       <main className="mx-auto max-w-4xl px-5 pb-16">
@@ -63,6 +64,8 @@ export default function App() {
           </div>
         )}
       </main>
+
+      <Footer />
     </div>
   )
 }
