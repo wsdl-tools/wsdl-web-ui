@@ -53,13 +53,13 @@ jobs:
       - run: npm ci
       - run: npm run build -- --base=/wsdl-web/
       - name: Upload Pages artifact
-        if: github.ref == 'refs/heads/main'
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: startsWith(github.ref, 'refs/tags/v')
     needs: build
     runs-on: ubuntu-latest
     permissions:
