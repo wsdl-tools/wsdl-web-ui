@@ -18,8 +18,8 @@ Support `?url=...` to pre-load a WSDL and `#service/endpoint/operation` to auto-
 ### ~~4. SOAP Fault parsing and display~~ ✅
 ~~Detect `<soap:Fault>` in responses and render them distinctly — showing faultcode, faultstring, and detail in a structured, readable format.~~
 
-### 5. WSDL `<import>` and `<include>` resolution
-Recursive fetching and merging of imported WSDLs and XSD files. Required for many enterprise services that split schemas across multiple files.
+### ~~5. WSDL `<import>` and `<include>` resolution~~ ✅
+~~Recursive fetching and merging of imported WSDLs and XSD files. Required for many enterprise services that split schemas across multiple files.~~
 
 ---
 
