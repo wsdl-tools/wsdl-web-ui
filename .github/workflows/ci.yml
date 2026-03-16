@@ -141,7 +141,6 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          registry-url: https://registry.npmjs.org
       - run: npm ci
       - run: npm run build:lib
-      - run: npm publish --provenance --access public
+      - run: npm publish --provenance --access public --registry https://registry.npmjs.org
