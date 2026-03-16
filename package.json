@@ -6,7 +6,7 @@
   },
   "type": "module",
   "description": "A web-based WSDL explorer and SOAP client. Use as a standalone page, embed via script tag, or include as a React component.",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/wsdl-web/wsdl-web"
