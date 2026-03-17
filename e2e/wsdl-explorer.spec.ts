@@ -159,8 +159,8 @@ test.describe('Footer', () => {
     await expect(footer).toBeVisible()
     await expect(footer.getByText('WSDL Web')).toBeVisible()
 
-    const ghLink = footer.getByRole('link', { name: /GitHub/ })
-    await expect(ghLink).toHaveAttribute('href', 'https://github.com/wsdl-web/wsdl-web')
+    const ghLink = footer.getByRole('link', { name: /WSDL Web Project/ })
+    await expect(ghLink).toHaveAttribute('href', 'https://github.com/wsdl-web')
     await expect(ghLink).toHaveAttribute('target', '_blank')
   })
 
