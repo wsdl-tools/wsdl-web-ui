@@ -15,5 +15,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/index.ts", "src/WsdlWeb.tsx", "src/config.ts", "src/config-context.ts"]
+  "include": ["src/index.ts", "src/WsdlWeb.tsx", "src/config.ts", "src/config-context.ts", "src/assets.d.ts"]
 }
