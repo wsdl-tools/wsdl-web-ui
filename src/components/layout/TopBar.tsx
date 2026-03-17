@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import logo from '@/assets/logo.svg'
 import { FolderOpen, Search, ArrowRight } from 'lucide-react'
 import { useWsdlStore } from '@/store/wsdl-store'
 import { useConfig } from '@/config-context'
@@ -42,12 +43,7 @@ export function TopBar() {
       <div className="mx-auto flex max-w-4xl items-center gap-3 px-5 py-3">
         {/* Logo */}
         <div className="flex items-center gap-2 shrink-0 mr-1">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--primary)]">
-            <svg viewBox="0 0 16 16" className="h-4 w-4 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-              <path d="M4 2h5l4 4v7a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1z" />
-              <polyline points="9 2 9 6 13 6" />
-            </svg>
-          </div>
+          <img src={logo} alt="WSDL Web" className="h-8 w-8" />
           <span className="hidden sm:block text-sm font-bold text-[var(--foreground)]">
             WSDL Web
           </span>

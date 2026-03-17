@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Globe body -->
+  <circle cx="32" cy="32" r="30" fill="#2a9d8f"/>
+  <!-- Darker hemisphere shading -->
+  <circle cx="32" cy="32" r="30" fill="url(#shade)"/>
+  <defs>
+    <radialGradient id="shade" cx="0.35" cy="0.35" r="0.65">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.25"/>
+    </radialGradient>
+  </defs>
+  <!-- Globe grid lines - horizontal -->
+  <ellipse cx="32" cy="20" rx="26" ry="3" stroke="#1a7a6e" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <ellipse cx="32" cy="44" rx="26" ry="3" stroke="#1a7a6e" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Globe grid lines - vertical meridians -->
+  <ellipse cx="32" cy="32" rx="12" ry="30" stroke="#1a7a6e" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <ellipse cx="32" cy="32" rx="24" ry="30" stroke="#1a7a6e" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Equator -->
+  <ellipse cx="32" cy="32" rx="30" ry="4" stroke="#1a7a6e" stroke-width="1.2" fill="none" opacity="0.5"/>
+  <!-- Code brackets </> -->
+  <path d="M22 24l-8 8 8 8" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M42 24l8 8-8 8" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="36" y1="20" x2="28" y2="44" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

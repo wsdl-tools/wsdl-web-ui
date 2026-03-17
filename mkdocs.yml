@@ -1,6 +1,6 @@
 site_name: WSDL Web
 site_url: https://outofcoffee.github.io/wsdl-web/
-repo_url: https://github.com/outofcoffee/wsdl-web
+repo_url: https://github.com/wsdl-web/wsdl-web
 
 theme:
   name: material
