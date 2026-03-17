@@ -4,9 +4,9 @@
 
 A browser-based interactive explorer for WSDL web services. Enter a WSDL URL to inspect its services, endpoints, bindings and operations, then invoke them directly from the browser with auto-generated SOAP requests.
 
-> Think [Swagger UI](https://github.com/swagger-api/swagger-ui), but for SOAP/WSDL.
+> Think Swagger UI, but for SOAP/WSDL.
 
-### [Try it live &rarr;](https://wsdl-web.github.io/wsdl-web)
+### [Try it live &rarr;](https://wsdl-web.github.io)
 No install required.
 
 ### Or run with Docker
@@ -16,6 +16,8 @@ docker run -p 8080:80 outofcoffee/wsdl-web
 ```
 
 Then open http://localhost:8080 in your browser.
+
+![Operation detail with SOAP envelope](docs/img/screenshot-operation.png)
 
 ## Features
 
@@ -34,6 +36,8 @@ Then open http://localhost:8080 in your browser.
 - **Local file support** — browse and load WSDL files from your device
 - **Import/include resolution** — recursive fetching and merging of `<wsdl:import>`, `<xsd:import>`, and `<xsd:include>` across multiple files
 - **Deep linking** — shareable URLs with `?url=` to pre-load a WSDL and `#service/endpoint/operation` to jump to a specific operation
+
+### [View documentation &rarr;](https://wsdl-web.github.io/wsdl-web)
 
 ## Screenshots
 
