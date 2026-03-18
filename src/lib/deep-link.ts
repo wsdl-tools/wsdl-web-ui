@@ -6,12 +6,14 @@ export interface DeepLinkTarget {
 
 export interface DeepLinkState {
   url: string | null
+  urls: string[]
   target: DeepLinkTarget | null
 }
 
 export function parseDeepLink(location: Location): DeepLinkState {
   const params = new URLSearchParams(location.search)
   const url = params.get('url')
+  const urls = params.getAll('urls')
 
   const hash = location.hash.startsWith('#') ? location.hash.slice(1) : ''
   let target: DeepLinkTarget | null = null
@@ -27,7 +29,7 @@ export function parseDeepLink(location: Location): DeepLinkState {
     }
   }
 
-  return { url, target }
+  return { url, urls, target }
 }
 
 export function buildDeepLinkUrl(
