@@ -68,9 +68,9 @@ describe('parseDeepLink', () => {
     })
   })
 
-  it('extracts multiple urls from query string', () => {
+  it('extracts multiple url params into urls array', () => {
     const result = parseDeepLink(
-      makeLocation('/wsdl-web/?urls=https%3A%2F%2Fa.com%2Fsvc&urls=https%3A%2F%2Fb.com%2Fsvc'),
+      makeLocation('/wsdl-web/?url=https%3A%2F%2Fa.com%2Fsvc&url=https%3A%2F%2Fb.com%2Fsvc'),
     )
     expect(result.urls).toEqual([
       'https://a.com/svc',
@@ -79,7 +79,7 @@ describe('parseDeepLink', () => {
     expect(result.url).toBeNull()
   })
 
-  it('returns empty urls array when not provided', () => {
+  it('returns empty urls array for single url param', () => {
     const result = parseDeepLink(
       makeLocation('/wsdl-web/?url=https%3A%2F%2Fexample.com%2Fservice'),
     )

@@ -29,7 +29,7 @@ export function useDeepLink(): void {
 
     const { url, urls, target } = parseDeepLink(window.location)
 
-    // Multiple WSDLs from query string: ?urls=a&urls=b
+    // Multiple WSDLs from query string: ?url=a&url=b
     if (urls.length > 0) {
       const specs = urls.map((u) => {
         try {
