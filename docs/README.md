@@ -15,7 +15,7 @@ User documentation for WSDL Web.
 
 ## Embedding
 
-- [Embedding with the dist bundle](embedding-dist-bundle.md) — add wsdl-web to any HTML page with a script tag
+- [Embedding with the standalone web bundle](embedding-standalone-web-bundle.md) — add wsdl-web to any HTML page with a script tag
 - [Embedding as an npm package](embedding-npm-package.md) — use the `<WsdlWeb />` React component in your project
 
 ## Deployment

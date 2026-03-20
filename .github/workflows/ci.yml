@@ -143,7 +143,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build:standalone
-      - name: Bundle standalone dist
+      - name: Bundle standalone web bundle
         run: |
           cp dist-standalone-template/index.html dist-standalone/
           cd dist-standalone && zip -r ../wsdl-web-standalone.zip .

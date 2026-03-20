@@ -1,6 +1,6 @@
-# Embedding wsdl-web with the Prebuilt Dist Bundle
+# Embedding wsdl-web with the Standalone Web Bundle
 
-The dist bundle lets you embed wsdl-web into any HTML page without a build step or Node.js toolchain. Include a script tag, a stylesheet, and call `WsdlWeb.init()`.
+The standalone web bundle lets you embed wsdl-web into any HTML page without a build step or Node.js toolchain. Include a script tag, a stylesheet, and call `WsdlWeb.init()`.
 
 ## Quick Start
 

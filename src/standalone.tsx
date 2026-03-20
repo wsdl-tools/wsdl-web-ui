@@ -1,5 +1,5 @@
 /**
- * Standalone entry point for the prebuilt dist bundle.
+ * Standalone web bundle entry point.
  *
  * Exposes `WsdlWeb.init(domNode, config)` on the global `window` object
  * so users can embed wsdl-web in any HTML page without a build step.
