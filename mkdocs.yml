@@ -29,7 +29,7 @@ nav:
       - Copy as cURL: copy-as-curl.md
       - WSDL documentation: wsdl-documentation.md
   - Embedding:
-      - Dist bundle: embedding-dist-bundle.md
+      - Standalone web bundle: embedding-standalone-web-bundle.md
       - npm package: embedding-npm-package.md
   - Docker: docker.md
 

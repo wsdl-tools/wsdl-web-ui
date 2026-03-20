@@ -4,12 +4,15 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 /**
- * Vite config for the standalone (prebuilt) dist bundle.
+ * Vite config for the standalone web bundle.
  * Produces a single JS file that can be loaded via <script> tag.
  */
 export default defineConfig({
   base: './',
   plugins: [react(), tailwindcss()],
+  define: {
+    'process.env.NODE_ENV': JSON.stringify('production'),
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

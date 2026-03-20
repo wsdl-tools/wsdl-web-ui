@@ -11,7 +11,7 @@ export interface WsdlSpec {
 /**
  * Configuration options for the embeddable WsdlWeb component.
  *
- * These options work identically whether you use the prebuilt dist bundle
+ * These options work identically whether you use the standalone web bundle
  * (`WsdlWeb.init()`) or the React component (`<WsdlWeb />`).
  */
 export interface WsdlWebConfig {
